@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="form">
+      <h2 class="form__header">Napište nám</h2>
+      <div class="form__field">
+        <label for="name">Jméno</label>
+        <input type="text" name="name" id="name" required autofocus />
+      </div>
+
+      <div class="form__field">
+        <label for="surname">Příjmení</label>
+        <input type="text" name="surname" id="surname" required />
+      </div>
+
+      <div class="form__field">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+
+      <div class="form__field form__field--optional">
+        <label for="telephone">Telefon</label>
+        <input
+          type="tel"
+          name="telephone"
+          id="telephone"
+          placeholder="+420 123 456 789"
+        />
+      </div>
+
+      <div class="form__topic">
+        <label for="select">Vyberte, čeho se Váš dotaz týká</label>
+        <select name="select" id="select" required>
+          <option value=""></option>
+          <option value="kurz">Dotaz na kurz</option>
+          <option value="cestování">Dotaz na cestování</option>
+          <option value="kulturní akce">Dotaz na kulturní akci</option>
+        </select>
+      </div>
+
+      <div class="form__text">
+        <label for="message">Vaše zpráva</label>
+        <textarea name="message" id="message" required></textarea>
+      </div>
+
+      <div class="form__approval">
+        <label for="approval">
+          <input type="checkbox" name="approval" id="approval" required />
+          Zaškrtnutím tohoto políčka dávám souhlas se zpracováním mých osobních
+          údajů.
+        </label>
+      </div>
+
+      <button type="submit" name="send" class="form__send">Odeslat</button>
+    </div>
+  </body>
+</html>
