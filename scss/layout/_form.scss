@@ -17,7 +17,8 @@ html {
 
   &__field label::after,
   &__text label::after,
-  &__topic label::after {
+  &__topic label::after,
+  .approval__word--last::after {
     content: '*';
     color: colors.$color-primary;
   }
@@ -77,9 +78,26 @@ html {
     margin-bottom: typography.$spacer;
   }
 
+  &__approval label {
+    display: block;
+  }
+
+  &__note::before {
+    content: '*';
+    color: colors.$color-primary;
+    display: inline-block;
+    margin-right: 3px;
+  }
+
+  &__note {
+    display: block;
+    margin-bottom: typography.$spacer;
+  }
+
   &__send {
     color: white;
     text-transform: uppercase;
+    cursor: pointer;
     padding: 10px 30px;
     border-radius: 20px;
     border: none;
@@ -87,9 +105,14 @@ html {
     margin: auto;
     background-image: linear-gradient(
       to right,
-      colors.$color-primary,
-      colors.$color-secondary
+      colors.$color-secondary,
+      colors.$color-primary
     );
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   @media screen and (min-width: 640px) {
@@ -116,7 +139,8 @@ html {
     }
 
     &__text,
-    &__approval {
+    &__approval,
+    &__note {
       flex-basis: 100%;
     }
 

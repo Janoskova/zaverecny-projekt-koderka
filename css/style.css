@@ -11,7 +11,8 @@ html {
   text-align: center;
   margin: 0;
 }
-.form__field label::after, .form__text label::after, .form__topic label::after {
+.form__field label::after, .form__text label::after, .form__topic label::after,
+.form .approval__word--last::after {
   content: "*";
   color: #f73e6e;
 }
@@ -58,15 +59,32 @@ html {
 .form__approval {
   margin-bottom: 20px;
 }
+.form__approval label {
+  display: block;
+}
+.form__note::before {
+  content: "*";
+  color: #f73e6e;
+  display: inline-block;
+  margin-right: 3px;
+}
+.form__note {
+  display: block;
+  margin-bottom: 20px;
+}
 .form__send {
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
   padding: 10px 30px;
   border-radius: 20px;
   border: none;
   display: block;
   margin: auto;
-  background-image: linear-gradient(to right, #f73e6e, #f7af66);
+  background-image: linear-gradient(to right, #f7af66, #f73e6e);
+}
+.form__send:hover, .form__send:focus {
+  text-decoration: underline;
 }
 @media screen and (min-width: 640px) {
   .form {
@@ -89,7 +107,7 @@ html {
     margin: auto;
     margin-top: 20px;
   }
-  .form__text, .form__approval {
+  .form__text, .form__approval, .form__note {
     flex-basis: 100%;
   }
   .form__approval {
@@ -97,11 +115,76 @@ html {
     margin: 20px auto 20px auto;
   }
 }
-.banner {
+.newsletter {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid red;
+}
+.newsletter__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.newsletter__email {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 30px;
+  border-radius: 20px;
+  caret-color: #f73e6e;
+  border: 1px solid lightgrey;
+}
+.newsletter__send {
   color: white;
-  background: linear-gradient(45deg, #f7af66a1, #f73e6fb9), url(/images/paris-roof.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 500px;
-  width: 500px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  margin: auto;
+  background-image: linear-gradient(to right, #f7af66, #f73e6e);
+}
+.newsletter__send:hover, .newsletter__send:focus {
+  text-decoration: underline;
+}
+.newsletter__flex {
+  margin-bottom: 20px;
+}
+.newsletter__approval {
+  margin-top: 20px;
+}
+.newsletter .approval__word--last::after {
+  content: "*";
+  color: #f73e6e;
+}
+.newsletter__note::before {
+  content: "*";
+  color: #f73e6e;
+  display: inline-block;
+  margin-right: 3px;
+}
+.newsletter__note {
+  display: block;
+  margin-top: 20px;
+}
+@media screen and (min-width: 640px) {
+  .newsletter {
+    width: 550px;
+  }
+  .newsletter__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .newsletter__email {
+    margin: 0;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #f73e6e;
+    border-right: 0;
+  }
+  .newsletter__send {
+    margin: 0;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid #f73e6e;
+    border-left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

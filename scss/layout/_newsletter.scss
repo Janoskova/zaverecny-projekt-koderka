@@ -1,0 +1,92 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.newsletter {
+  margin: typography.$spacer;
+  padding: typography.$spacer;
+  border: 1px solid red;
+
+  &__header {
+    text-align: center;
+    margin-bottom: typography.$spacer;
+  }
+
+  &__email {
+    display: block;
+    margin: 0 auto typography.$spacer auto;
+    padding: 10px 30px;
+    border-radius: 20px;
+    caret-color: colors.$color-primary;
+    border: 1px solid lightgrey;
+  }
+
+  &__send {
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    margin: auto;
+    background-image: linear-gradient(
+      to right,
+      colors.$color-secondary,
+      colors.$color-primary
+    );
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__flex {
+    margin-bottom: typography.$spacer;
+  }
+
+  &__approval {
+    margin-top: typography.$spacer;
+  }
+
+  .approval__word--last::after {
+    content: '*';
+    color: colors.$color-primary;
+  }
+
+  &__note::before {
+    content: '*';
+    color: colors.$color-primary;
+    display: inline-block;
+    margin-right: 3px;
+  }
+
+  &__note {
+    display: block;
+    margin-top: typography.$spacer;
+  }
+
+  @media screen and (min-width: 640px) {
+    width: 550px;
+
+    &__flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__email {
+      margin: 0;
+      border-radius: 20px 0 0 20px;
+      border: 1px solid colors.$color-primary;
+      border-right: 0;
+    }
+
+    &__send {
+      margin: 0;
+      border-radius: 0 20px 20px 0;
+      border: 1px solid colors.$color-primary;
+      border-left: 0;
+    }
+  }
+}
