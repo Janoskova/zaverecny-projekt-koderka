@@ -1,0 +1,103 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.header {
+  @media screen and (min-width: 1100px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: typography.$spacer;
+  }
+}
+
+.logo {
+  display: none;
+  @media screen and (min-width: 1100px) {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &__text {
+      text-transform: uppercase;
+      color: black;
+      font-weight: 400;
+      font-size: 22px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.menu {
+  &__checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__toggler {
+    vertical-align: top;
+    cursor: pointer;
+  }
+
+  &__description {
+    display: block;
+    text-align: right;
+    padding: typography.$spacer;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+
+  &__item {
+    text-align: center;
+    border-top: 1px solid lightgrey;
+    @media screen and (max-width: 639px) {
+      &:hover,
+      &:focus {
+        background-color: colors.$color-secondary;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    display: block;
+    padding: typography.$spacer;
+  }
+
+  @media screen and (max-width: 639px) {
+    &__checkbox:checked ~ .menu__list {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    &__description {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    &__item {
+      border: none;
+      list-style-type: none;
+    }
+
+    &__link {
+      padding: 10px;
+      position: relative;
+    }
+  }
+}

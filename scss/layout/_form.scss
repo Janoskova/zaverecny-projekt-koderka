@@ -1,10 +1,6 @@
 @use '../base/colors';
 @use '../base/typography';
 
-html {
-  box-sizing: border-box;
-}
-
 .form {
   margin: typography.$spacer;
   padding: typography.$spacer;

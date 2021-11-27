@@ -1,1 +1,28 @@
+@use './colors';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Comforter Brush', cursive;
+  color: colors.$color-primary;
+}
+
+h2,
+h3 {
+  color: colors.$color-primary;
+}
+
 $spacer: 20px;
