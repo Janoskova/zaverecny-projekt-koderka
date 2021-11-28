@@ -23,6 +23,103 @@ h3 {
   color: #f73e6e;
 }
 
+@media screen and (min-width: 1100px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+  }
+}
+
+.logo {
+  display: none;
+}
+@media screen and (min-width: 1100px) {
+  .logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .logo__text {
+    text-transform: uppercase;
+    color: black;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+  }
+}
+
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.menu__text {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.menu__toggler {
+  vertical-align: top;
+  cursor: pointer;
+}
+.menu__toggler--cross {
+  display: none;
+}
+.menu__description {
+  display: block;
+  text-align: right;
+  padding: 20px;
+}
+.menu__list {
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.menu__item {
+  text-align: center;
+  border-top: 1px solid lightgrey;
+}
+@media screen and (max-width: 639px) {
+  .menu__item:hover, .menu__item:focus {
+    background-color: #f7af66;
+  }
+}
+.menu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  display: block;
+  padding: 20px;
+}
+@media screen and (max-width: 639px) {
+  .menu__checkbox:checked ~ .menu__list {
+    display: block;
+  }
+  .menu__checkbox:checked ~ .menu__description > .menu__toggler--hamburger, .menu__checkbox:checked ~ .menu__description > .menu__text {
+    display: none;
+  }
+  .menu__checkbox:checked ~ .menu__description > .menu__toggler--cross {
+    display: inline;
+  }
+}
+@media screen and (min-width: 640px) {
+  .menu__description {
+    display: none;
+  }
+  .menu__list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .menu__item {
+    border: none;
+    list-style-type: none;
+  }
+  .menu__link {
+    padding: 10px;
+    position: relative;
+  }
+}
+
 .form {
   margin: 20px;
   padding: 20px;
@@ -210,90 +307,39 @@ h3 {
   }
 }
 
-@media screen and (min-width: 1100px) {
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px;
-  }
+.network {
+  background: linear-gradient(45deg, #f7af66a1, #f73e6fb9);
+  text-align: center;
+  padding: 20px;
+}
+.network__header {
+  color: white;
+  margin: 0 0 20px 0;
+}
+.network__newsletter, .network__twitter, .network__facebook, .network__instagram {
+  padding: 0 10px 0 10px;
 }
 
-.logo {
-  display: none;
-}
-@media screen and (min-width: 1100px) {
-  .logo {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-  .logo__text {
-    text-transform: uppercase;
-    color: black;
-    font-weight: 400;
-    font-size: 22px;
-    margin-left: 10px;
-  }
-}
-
-.menu__checkbox {
+.translation__checkbox {
   position: absolute;
   left: -9999px;
 }
-.menu__text {
-  text-transform: uppercase;
+.translation__checkbox:checked ~ .translation__text {
+  display: block;
+}
+.translation__checkbox:checked ~ .translation__bla > .translation__toggler--right {
+  display: none;
+}
+.translation__checkbox:checked ~ .translation__bla > .translation__toggler--down {
+  display: inline;
+}
+.translation__toggler--right, .translation__toggler--down {
   cursor: pointer;
 }
-.menu__toggler {
+.translation__description {
   vertical-align: top;
   cursor: pointer;
 }
-.menu__description {
-  display: block;
-  text-align: right;
-  padding: 20px;
-}
-.menu__list {
-  margin: 0;
-  padding: 0;
+.translation__text, .translation__toggler--down {
   display: none;
-}
-.menu__item {
-  text-align: center;
-  border-top: 1px solid lightgrey;
-}
-@media screen and (max-width: 639px) {
-  .menu__item:hover, .menu__item:focus {
-    background-color: #f7af66;
-  }
-}
-.menu__link {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-  display: block;
-  padding: 20px;
-}
-@media screen and (max-width: 639px) {
-  .menu__checkbox:checked ~ .menu__list {
-    display: block;
-  }
-}
-@media screen and (min-width: 640px) {
-  .menu__description {
-    display: none;
-  }
-  .menu__list {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .menu__item {
-    border: none;
-    list-style-type: none;
-  }
-  .menu__link {
-    padding: 10px;
-    position: relative;
-  }
 }/*# sourceMappingURL=style.css.map */

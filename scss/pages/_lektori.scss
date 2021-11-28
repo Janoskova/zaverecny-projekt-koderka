@@ -1,0 +1,36 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.translation {
+  &__checkbox {
+    position: absolute;
+    left: -9999px;
+
+    &:checked ~ .translation__text {
+      display: block;
+    }
+
+    &:checked ~ .translation__bla > .translation__toggler--right {
+      display: none;
+    }
+
+    &:checked ~ .translation__bla > .translation__toggler--down {
+      display: inline;
+    }
+  }
+
+  &__toggler--right,
+  &__toggler--down {
+    cursor: pointer;
+  }
+
+  &__description {
+    vertical-align: top;
+    cursor: pointer;
+  }
+
+  &__text,
+  &__toggler--down {
+    display: none;
+  }
+}

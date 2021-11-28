@@ -1,8 +1,10 @@
 @use 'base/typography';
 @use 'base/colors';
+@use 'layout/header';
 @use 'layout/form';
 @use 'layout/newsletter';
-@use 'layout/header';
+@use 'layout/footer';
+@use 'pages/lektori';
 
 // .banner {
 //   color: white;

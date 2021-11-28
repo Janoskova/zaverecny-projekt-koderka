@@ -43,6 +43,10 @@
     cursor: pointer;
   }
 
+  &__toggler--cross {
+    display: none;
+  }
+
   &__description {
     display: block;
     text-align: right;
@@ -77,6 +81,15 @@
   @media screen and (max-width: 639px) {
     &__checkbox:checked ~ .menu__list {
       display: block;
+    }
+
+    &__checkbox:checked ~ .menu__description > .menu__toggler--hamburger,
+    &__checkbox:checked ~ .menu__description > .menu__text {
+      display: none;
+    }
+
+    &__checkbox:checked ~ .menu__description > .menu__toggler--cross {
+      display: inline;
     }
   }
 
