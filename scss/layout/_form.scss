@@ -6,7 +6,7 @@
   padding: typography.$spacer;
   border-radius: 10px;
 
-  &__header {
+  &__heading {
     text-align: center;
     margin: 0;
   }
@@ -120,7 +120,7 @@
     margin: auto;
     border: 1px solid red;
 
-    &__header {
+    &__heading {
       flex-basis: 100%;
     }
 

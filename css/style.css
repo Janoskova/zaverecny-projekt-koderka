@@ -125,7 +125,7 @@ h3 {
   padding: 20px;
   border-radius: 10px;
 }
-.form__header {
+.form__heading {
   text-align: center;
   margin: 0;
 }
@@ -214,7 +214,7 @@ h3 {
     margin: auto;
     border: 1px solid red;
   }
-  .form__header {
+  .form__heading {
     flex-basis: 100%;
   }
   .form__field {
@@ -312,7 +312,7 @@ h3 {
   text-align: center;
   padding: 20px;
 }
-.network__header {
+.network__heading {
   color: white;
   margin: 0 0 20px 0;
 }
@@ -327,19 +327,86 @@ h3 {
 .translation__checkbox:checked ~ .translation__text {
   display: block;
 }
-.translation__checkbox:checked ~ .translation__bla > .translation__toggler--right {
+.translation__checkbox:checked ~ .translation__description > .translation__toggler--right {
   display: none;
 }
-.translation__checkbox:checked ~ .translation__bla > .translation__toggler--down {
+.translation__checkbox:checked ~ .translation__description > .translation__toggler--down {
   display: inline;
 }
-.translation__toggler--right, .translation__toggler--down {
+.translation__toggler {
   cursor: pointer;
 }
-.translation__description {
+.translation__heading {
   vertical-align: top;
   cursor: pointer;
 }
 .translation__text, .translation__toggler--down {
   display: none;
+}
+
+.voting {
+  border: 1px solid #f73e6e;
+  text-align: center;
+}
+.voting__heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.voting__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.voting__checkbox:checked + .voting__description::before {
+  background-color: #f73e6e;
+}
+.voting__description {
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 30px 10px 40px;
+  border-radius: 20px;
+  display: block;
+  position: relative;
+  width: 270px;
+  margin: 20px auto 20px auto;
+  background-image: linear-gradient(to right, #f7af66, #f73e6e);
+}
+.voting__description::before {
+  content: "";
+  display: inline;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+}
+.voting__description:hover, .voting__description:focus {
+  text-decoration: underline;
+}
+.voting__send {
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 30px 10px 40px;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  width: 270px;
+  margin: 20px auto 20px auto;
+  background-image: linear-gradient(to right, #f7af66, #f73e6e);
+}
+.voting__send:hover, .voting__send:focus {
+  text-decoration: underline;
+}
+@media screen and (min-width: 640px) {
+  .voting__options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .voting__description {
+    margin: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

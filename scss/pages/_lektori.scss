@@ -10,21 +10,20 @@
       display: block;
     }
 
-    &:checked ~ .translation__bla > .translation__toggler--right {
+    &:checked ~ .translation__description > .translation__toggler--right {
       display: none;
     }
 
-    &:checked ~ .translation__bla > .translation__toggler--down {
+    &:checked ~ .translation__description > .translation__toggler--down {
       display: inline;
     }
   }
 
-  &__toggler--right,
-  &__toggler--down {
+  &__toggler {
     cursor: pointer;
   }
 
-  &__description {
+  &__heading {
     vertical-align: top;
     cursor: pointer;
   }

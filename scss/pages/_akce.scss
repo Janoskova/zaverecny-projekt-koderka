@@ -1,0 +1,89 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.voting {
+  border: 1px solid colors.$color-primary;
+  text-align: center;
+
+  &__heading {
+    margin-top: typography.$spacer;
+    margin-bottom: typography.$spacer;
+  }
+
+  &__checkbox {
+    position: absolute;
+    left: -9999px;
+
+    &:checked + .voting__description::before {
+      background-color: colors.$color-primary;
+    }
+  }
+
+  &__description {
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 30px 10px 40px;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    width: 270px;
+    margin: typography.$spacer auto typography.$spacer auto;
+    background-image: linear-gradient(
+      to right,
+      colors.$color-secondary,
+      colors.$color-primary
+    );
+
+    &::before {
+      content: '';
+      display: inline;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 25px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__send {
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 30px 10px 40px;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    width: 270px;
+    margin: typography.$spacer auto typography.$spacer auto;
+    background-image: linear-gradient(
+      to right,
+      colors.$color-secondary,
+      colors.$color-primary
+    );
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    &__options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__description {
+      margin: typography.$spacer;
+    }
+  }
+}
