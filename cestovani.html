@@ -1,0 +1,37 @@
+---
+layout: layouts/main-template.njk
+title: Cestování
+---
+
+<div class="banner">
+  <h1>Cestuj</h1>
+</div>
+<form
+  method="post"
+  action="https://submit-form.com/RQBLJimx"
+  class="newsletter"
+>
+  <h2 class="newsletter__header">Přihlásit se k newsletteru</h2>
+  <div class="newsletter__flex">
+    <input
+      type="email"
+      name="newsletter__email"
+      id="newsletter__email"
+      class="newsletter__email"
+      placeholder="Zadejte e-mailovou adresu."
+      required
+    />
+
+    <button type="submit" name="newsletter__send" class="newsletter__send">
+      Odeslat
+    </button>
+  </div>
+
+  <label for="newsletter__approval">
+    <input type="checkbox" name="approval__GDPR" id="approval__GDPR" required />
+    Zaškrtnutím tohoto políčka dávám souhlas se zpracováním mých osobních
+    <span class="approval__word--last">údajů.</span>
+  </label>
+
+  <span class="newsletter__note">povinné pole</span>
+</form>

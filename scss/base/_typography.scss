@@ -26,3 +26,9 @@ h3 {
 }
 
 $spacer: 20px;
+
+.wrapper {
+  max-width: 66rem;
+  margin: 0 auto;
+  border: 1px solid lightgrey;
+}

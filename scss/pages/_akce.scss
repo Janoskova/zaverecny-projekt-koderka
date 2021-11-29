@@ -17,6 +17,10 @@
     &:checked + .voting__description::before {
       background-color: colors.$color-primary;
     }
+
+    &:checked ~ .voting__send {
+      display: block;
+    }
   }
 
   &__description {
@@ -60,8 +64,9 @@
     padding: 10px 30px 10px 40px;
     border-radius: 20px;
     border: none;
-    display: block;
+    display: none;
     width: 270px;
+    height: 45px;
     margin: typography.$spacer auto typography.$spacer auto;
     background-image: linear-gradient(
       to right,
@@ -72,18 +77,6 @@
     &:hover,
     &:focus {
       text-decoration: underline;
-    }
-  }
-
-  @media screen and (min-width: 640px) {
-    &__options {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    &__description {
-      margin: typography.$spacer;
     }
   }
 }

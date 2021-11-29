@@ -23,12 +23,20 @@ h3 {
   color: #f73e6e;
 }
 
+.wrapper {
+  max-width: 66rem;
+  margin: 0 auto;
+  border: 1px solid lightgrey;
+}
+
 @media screen and (min-width: 1100px) {
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 20px;
+    margin-top: 0;
+    padding-top: 20px;
   }
 }
 
@@ -359,6 +367,9 @@ h3 {
 .voting__checkbox:checked + .voting__description::before {
   background-color: #f73e6e;
 }
+.voting__checkbox:checked ~ .voting__send {
+  display: block;
+}
 .voting__description {
   color: white;
   text-transform: uppercase;
@@ -392,21 +403,12 @@ h3 {
   padding: 10px 30px 10px 40px;
   border-radius: 20px;
   border: none;
-  display: block;
+  display: none;
   width: 270px;
+  height: 45px;
   margin: 20px auto 20px auto;
   background-image: linear-gradient(to right, #f7af66, #f73e6e);
 }
 .voting__send:hover, .voting__send:focus {
   text-decoration: underline;
-}
-@media screen and (min-width: 640px) {
-  .voting__options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .voting__description {
-    margin: 20px;
-  }
 }/*# sourceMappingURL=style.css.map */
