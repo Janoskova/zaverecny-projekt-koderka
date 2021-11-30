@@ -1,35 +1,119 @@
 @use '../base/colors';
 @use '../base/typography';
 
-.translation {
+.profile {
+  border: 1px solid colors.$color-primary;
+  padding: typography.$spacer;
+
+  &__introduction {
+    text-align: center;
+  }
+
+  &__heading {
+    margin: typography.$spacer 0 typography.$spacer 0;
+  }
+
+  &__picture {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+  }
+
+  &__email {
+    margin: typography.$spacer;
+
+    .email__picture {
+      vertical-align: top;
+    }
+  }
+
+  &__french {
+    text-align: left;
+    padding-left: typography.$spacer;
+    padding-right: typography.$spacer;
+  }
+
   &__checkbox {
     position: absolute;
     left: -9999px;
 
-    &:checked ~ .translation__text {
+    &:checked ~ .profile__czech {
       display: block;
     }
 
-    &:checked ~ .translation__description > .translation__toggler--right {
+    &:checked ~ .profile__description > .profile__toggler--right {
       display: none;
     }
 
-    &:checked ~ .translation__description > .translation__toggler--down {
+    &:checked ~ .profile__description > .profile__toggler--down {
       display: inline;
     }
+  }
+
+  &__description {
+    padding-left: typography.$spacer;
   }
 
   &__toggler {
     cursor: pointer;
   }
 
-  &__heading {
+  &__toggler--text {
+    color: colors.$color-primary;
+    font-weight: 700;
     vertical-align: top;
     cursor: pointer;
+    display: inline;
   }
 
-  &__text,
+  &__czech,
   &__toggler--down {
     display: none;
+  }
+
+  &__czech {
+    padding: typography.$spacer;
+    padding-top: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__invitation {
+    color: colors.$color-primary;
+    font-weight: 700;
+  }
+
+  &__invitation--underline {
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: 640px) {
+    display: flex;
+    align-items: flex-start;
+
+    &__picture {
+      margin: typography.$spacer typography.$spacer 0 typography.$spacer;
+      width: 200px;
+      height: 200px;
+    }
+
+    &__introduction {
+      text-align: left;
+    }
+
+    &__heading {
+      margin-left: typography.$spacer;
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    &__picture {
+      width: 250px;
+      height: 250px;
+    }
   }
 }
