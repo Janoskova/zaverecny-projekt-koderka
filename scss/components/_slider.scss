@@ -1,0 +1,14 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.siema {
+  border: 1px solid colors.$color-primary;
+  margin: typography.$spacer;
+  padding: typography.$spacer;
+
+  &__card {
+    width: 200px;
+    height: 150px;
+    margin: 0 auto 0 auto;
+  }
+}

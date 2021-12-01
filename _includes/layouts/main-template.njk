@@ -18,17 +18,29 @@
   </head>
   <body>
     <div class="wrapper">
+      {% include 'partials/header.njk' %}
 
-{% include 'partials/header.njk' %}
+      <main class="main">
+        {{ content | safe }}
+      </main>
 
-<main class="main">
-
-{{ content | safe }}
-
-</main>
-
-{% include 'partials/footer.njk' %}
-
-</div>
-     </body>
+      {% include 'partials/footer.njk' %}
+    </div>
+    <script src="/js/fslightbox.js"></script>
+    <script src="/js/siema.min.js"></script>
+    <script>
+      const mySiema = new Siema({
+        perPage: {
+          640: 2,
+          1100: 3,
+        },
+      });
+      document
+        .querySelector('.siema__prev')
+        .addEventListener('click', () => mySiema.prev());
+      document
+        .querySelector('.siema__next')
+        .addEventListener('click', () => mySiema.next());
+    </script>
+  </body>
 </html>

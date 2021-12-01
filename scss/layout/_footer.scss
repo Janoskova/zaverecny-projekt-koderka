@@ -2,7 +2,12 @@
 @use '../base/typography';
 
 .network {
-  background: linear-gradient(45deg, #f7af66a1, #f73e6fb9);
+  background: linear-gradient(
+    45deg,
+    colors.$color-secondary,
+    colors.$color-primary
+  );
+
   text-align: center;
   padding: typography.$spacer;
 

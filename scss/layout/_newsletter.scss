@@ -4,7 +4,7 @@
 .newsletter {
   margin: typography.$spacer;
   padding: typography.$spacer;
-  border: 1px solid red;
+  border: 1px solid colors.$color-primary;
 
   &__header {
     text-align: center;

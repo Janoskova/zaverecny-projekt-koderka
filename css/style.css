@@ -89,7 +89,7 @@ h3 {
 }
 @media screen and (max-width: 639px) {
   .menu__item:hover, .menu__item:focus {
-    background-color: #f7af66;
+    background-color: #f7af6643;
   }
 }
 .menu__link {
@@ -244,7 +244,7 @@ h3 {
 .newsletter {
   margin: 20px;
   padding: 20px;
-  border: 1px solid red;
+  border: 1px solid #f73e6e;
 }
 .newsletter__header {
   text-align: center;
@@ -315,8 +315,23 @@ h3 {
   }
 }
 
+.siema {
+  border: 1px solid #f73e6e;
+  margin: 20px;
+  padding: 20px;
+}
+.siema__card {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto 0 auto;
+}
+
+.gallery__item {
+  width: 100%;
+}
+
 .network {
-  background: linear-gradient(45deg, #f7af66a1, #f73e6fb9);
+  background: linear-gradient(45deg, #f7af66, #f73e6e);
   text-align: center;
   padding: 20px;
 }
