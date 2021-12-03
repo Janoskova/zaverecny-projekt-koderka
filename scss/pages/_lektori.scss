@@ -2,7 +2,7 @@
 @use '../base/typography';
 
 .profile {
-  border: 1px solid colors.$color-primary;
+  border-top: 1px solid lightgrey;
   padding: typography.$spacer;
 
   &__introduction {
@@ -107,6 +107,7 @@
 
     &__heading {
       margin-left: typography.$spacer;
+      text-align: left;
     }
   }
 

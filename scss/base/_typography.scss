@@ -10,6 +10,8 @@ html {
   box-sizing: inherit;
 }
 
+$spacer: 20px;
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -23,9 +25,10 @@ h1 {
 h2,
 h3 {
   color: colors.$color-primary;
+  margin-top: $spacer;
+  margin-bottom: $spacer;
+  text-align: center;
 }
-
-$spacer: 20px;
 
 .wrapper {
   max-width: 66rem;

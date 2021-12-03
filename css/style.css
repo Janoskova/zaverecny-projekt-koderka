@@ -21,6 +21,9 @@ h1 {
 h2,
 h3 {
   color: #f73e6e;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .wrapper {
@@ -169,7 +172,7 @@ h3 {
 }
 .form__topic select {
   display: block;
-  width: 100%;
+  width: calc(100% - 20px);
   height: 40px;
   border-radius: 10px;
   border: 1px solid lightgrey;
@@ -220,7 +223,6 @@ h3 {
     width: 70%;
     padding: 40px;
     margin: auto;
-    border: 1px solid red;
   }
   .form__heading {
     flex-basis: 100%;
@@ -316,14 +318,45 @@ h3 {
 }
 
 .siema {
-  border: 1px solid #f73e6e;
   margin: 20px;
-  padding: 20px;
+  margin-bottom: 0;
+  border-top: 1px solid #f73e6e;
 }
 .siema__card {
-  width: 200px;
-  height: 150px;
+  padding: 20px 20px 0 20px;
   margin: 0 auto 0 auto;
+  max-width: 400px;
+  border-radius: 10px;
+}
+.siema__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.siema__text {
+  margin: 20px 0 20px 0;
+}
+.siema__text--bold {
+  display: block;
+  font-weight: 700;
+}
+.siema__buttons {
+  text-align: center;
+}
+.siema__prev {
+  padding: 20px 10px 20px 20px;
+}
+.siema__next {
+  padding: 20px 20px 20px 10px;
+}
+.siema__prev, .siema__next {
+  border: none;
+  background-color: white;
+}
+@media screen and (min-width: 640px) {
+  .siema__card {
+    margin: 0 auto 0 auto;
+  }
 }
 
 .gallery__item {
@@ -344,7 +377,7 @@ h3 {
 }
 
 .profile {
-  border: 1px solid #f73e6e;
+  border-top: 1px solid lightgrey;
   padding: 20px;
 }
 .profile__introduction {
@@ -429,6 +462,7 @@ h3 {
   }
   .profile__heading {
     margin-left: 20px;
+    text-align: left;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -497,4 +531,58 @@ h3 {
 }
 .voting__send:hover, .voting__send:focus {
   text-decoration: underline;
+}
+
+.travelling__map {
+  overflow: hidden;
+  padding-bottom: 40%;
+  position: relative;
+  height: 0;
+}
+.travelling__map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.contact {
+  padding-bottom: 20px;
+}
+.contact__address span, .contact__other span {
+  display: block;
+  text-align: center;
+}
+.contact__mail, .contact__phone {
+  vertical-align: bottom;
+}
+.contact__mail {
+  padding-right: 5px;
+}
+.contact__map {
+  overflow: hidden;
+  padding-bottom: 40%;
+  position: relative;
+  height: 0;
+  margin-top: 20px;
+}
+.contact__map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+@media screen and (min-width: 640px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+  }
+  .contact__address {
+    flex-basis: 40%;
+  }
+  .contact__other {
+    flex-basis: 40%;
+  }
 }/*# sourceMappingURL=style.css.map */

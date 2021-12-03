@@ -1,0 +1,49 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.contact {
+  padding-bottom: typography.$spacer;
+  &__address span,
+  &__other span {
+    display: block;
+    text-align: center;
+  }
+
+  &__mail,
+  &__phone {
+    vertical-align: bottom;
+  }
+
+  &__mail {
+    padding-right: 5px;
+  }
+
+  &__map {
+    overflow: hidden;
+    padding-bottom: 40%;
+    position: relative;
+    height: 0;
+    margin-top: typography.$spacer;
+
+    iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    display: flex;
+    justify-content: center;
+
+    &__address {
+      flex-basis: 40%;
+    }
+
+    &__other {
+      flex-basis: 40%;
+    }
+  }
+}

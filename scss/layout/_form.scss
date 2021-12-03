@@ -55,7 +55,7 @@
 
   &__topic select {
     display: block;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 40px;
     border-radius: 10px;
     border: 1px solid lightgrey;
@@ -118,7 +118,6 @@
     width: 70%;
     padding: 40px;
     margin: auto;
-    border: 1px solid red;
 
     &__heading {
       flex-basis: 100%;
