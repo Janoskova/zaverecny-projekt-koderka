@@ -58,16 +58,19 @@
   &__list {
     margin: 0;
     padding: 0;
-    display: none;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
   }
 
   &__item {
     text-align: center;
-    border-top: 1px solid lightgrey;
+    border-top: 1px solid white;
+
     @media screen and (max-width: 639px) {
       &:hover,
       &:focus {
-        background-color: #f7af6643;
+        text-decoration: underline;
       }
     }
   }
@@ -75,7 +78,7 @@
   &__link {
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
+    color: white;
     display: block;
     padding: typography.$spacer;
   }
@@ -83,6 +86,13 @@
   @media screen and (max-width: 639px) {
     &__checkbox:checked ~ .menu__list {
       display: block;
+      position: static;
+      background-image: linear-gradient(
+        to right,
+        colors.$color-secondary,
+        colors.$color-primary
+      );
+      transform: translateX(0);
     }
 
     &__checkbox:checked ~ .menu__description > .menu__toggler--hamburger,
@@ -103,16 +113,39 @@
     &__list {
       display: flex;
       justify-content: space-evenly;
+      position: static;
+      transform: none;
+      transition: none;
     }
 
     &__item {
       border: none;
       list-style-type: none;
+      padding: 10px;
+      color: black;
     }
 
     &__link {
-      padding: 10px;
       position: relative;
+      color: black;
+      padding: 0;
+
+      &::after {
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: colors.$color-primary;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+
+      &:hover:after {
+        width: 100%;
+        left: 0;
+      }
     }
   }
 }

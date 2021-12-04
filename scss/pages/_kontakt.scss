@@ -4,6 +4,7 @@
 .contact {
   padding-bottom: typography.$spacer;
   &__address span,
+  &__hours span,
   &__other span {
     display: block;
     text-align: center;
@@ -36,6 +37,7 @@
 
   @media screen and (min-width: 640px) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
     &__address {
@@ -44,6 +46,10 @@
 
     &__other {
       flex-basis: 40%;
+    }
+
+    &__hours {
+      flex-basis: 100%;
     }
   }
 }
