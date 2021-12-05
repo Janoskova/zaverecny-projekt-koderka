@@ -14,8 +14,9 @@ body {
 }
 
 h1 {
-  font-family: "Comforter Brush", cursive;
+  font-family: "Fuzzy Bubbles", cursive;
   color: #f73e6e;
+  font-weight: 700;
 }
 
 h2,
@@ -400,6 +401,18 @@ h3 {
 }
 .network__newsletter, .network__twitter, .network__facebook, .network__instagram {
   padding: 0 10px 0 10px;
+}
+
+.teachers__banner {
+  background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 30%), url(/images/banner-team.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom center;
+  height: 400px;
+}
+.teachers__heading {
+  color: white;
+  text-align: center;
 }
 
 .profile {

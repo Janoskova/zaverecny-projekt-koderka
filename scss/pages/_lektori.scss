@@ -1,6 +1,27 @@
 @use '../base/colors';
 @use '../base/typography';
 
+.teachers {
+  &__banner {
+    background-image: linear-gradient(
+        to bottom,
+        #f7af66e2,
+        #f73e6fd0,
+        rgba(255, 255, 255, 0) 30%
+      ),
+      url(/images/banner-team.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    height: 400px;
+  }
+
+  &__heading {
+    color: white;
+    text-align: center;
+  }
+}
+
 .profile {
   border-top: 1px solid lightgrey;
   padding: typography.$spacer;
