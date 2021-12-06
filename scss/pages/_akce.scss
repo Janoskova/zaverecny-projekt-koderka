@@ -1,8 +1,33 @@
 @use '../base/colors';
 @use '../base/typography';
 
+.events {
+  &__banner {
+    background-image: linear-gradient(
+        to bottom,
+        #f7af66e2,
+        #f73e6fd0,
+        rgba(255, 255, 255, 0) 35%
+      ),
+      url(/images/banner-events.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    min-height: 400px;
+
+    @media screen and (min-width: 640px) {
+      background-image: linear-gradient(
+          to bottom,
+          #f7af66e2,
+          #f73e6fd0,
+          rgba(255, 255, 255, 0) 20%
+        ),
+        url(/images/banner-events.jpg);
+    }
+  }
+}
+
 .voting {
-  border: 1px solid colors.$color-primary;
   text-align: center;
 
   &__heading {

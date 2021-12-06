@@ -3,101 +3,105 @@ layout: layouts/main-template.njk
 title: Kontakt
 ---
 
-<h2>Přijdťe nás navštívit.</h2>
-
 <div class="contact">
-  <div class="contact__address">
-    <h3>Adresa</h3>
-    <span>Ke škole 973</span>
-    <span>Mníšek pod Brdy</span>
-    <span>252&nbsp10</span>
+  <div class="contact__banner">
+    <h1 class="contact__heading">Přijď nás navštívit</h1>
   </div>
 
-  <div class="contact__other">
-    <h3>Kontakt</h3>
-    <span
-      ><img
-        class="contact__phone"
-        src="/images/phone.svg"
-        alt="telefon"
-      />(+420) 123 456 789</span
-    >
-    <span
-      ><img
-        class="contact__mail"
-        src="/images/email.svg"
-        alt="email"
-      />skola@domtom.cz</span
-    >
+  <div class="contact__details">
+    <div class="contact__address">
+      <h3>Adresa</h3>
+      <span>Ke škole 973</span>
+      <span>Mníšek pod Brdy</span>
+      <span>252&nbsp10</span>
+    </div>
+
+    <div class="contact__other">
+      <h3>Kontakt</h3>
+      <span
+        ><img
+          class="contact__phone"
+          src="/images/phone.svg"
+          alt="telefon"
+        />(+420) 123 456 789</span
+      >
+      <span
+        ><img
+          class="contact__mail"
+          src="/images/email.svg"
+          alt="email"
+        />skola@domtom.cz</span
+      >
+    </div>
+
+    <div class="contact__hours">
+      <h3>Otevírací doba</h3>
+      <span>pondělí–pátek 8:00–18:00</span>
+    </div>
   </div>
 
-  <div class="contact__hours">
-    <h3>Otevírací doba</h3>
-    <span>pondělí–pátek 8:00–18:00</span>
+  <div class="contact__map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1818.6404465179805!2d14.25851459644562!3d49.86225929252289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9f3e4653e769%3A0xf1a0a49fb4710c7!2zS2UgxaFrb2xlIDk3MywgMjUyIDEwIE1uw63FoWVrIHBvZCBCcmR5!5e0!3m2!1scs!2scz!4v1638529747575!5m2!1scs!2scz"
+      width="400"
+      height="300"
+      style="border: 0"
+      allowfullscreen=""
+    ></iframe>
   </div>
+
+  <form method="post" action="https://submit-form.com/p0NQei1I" class="form">
+    <h2 class="form__heading">Napiš nám</h2>
+    <div class="form__field">
+      <label for="name">Jméno</label>
+      <input type="text" name="name" id="name" required />
+    </div>
+
+    <div class="form__field">
+      <label for="surname">Příjmení</label>
+      <input type="text" name="surname" id="surname" required />
+    </div>
+
+    <div class="form__field">
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email" required />
+    </div>
+
+    <div class="form__field form__field--optional">
+      <label for="telephone">Telefon</label>
+      <input
+        type="tel"
+        name="telephone"
+        id="telephone"
+        placeholder="+420 123 456 789"
+      />
+    </div>
+
+    <div class="form__topic">
+      <label for="select">Vyberte, čeho se Váš dotaz týká</label>
+      <select name="select" id="select" required>
+        <option value=""></option>
+        <option value="kurz">Dotaz na kurz</option>
+        <option value="cestování">Dotaz na cestování</option>
+        <option value="kulturní akce">Dotaz na kulturní akci</option>
+      </select>
+    </div>
+
+    <div class="form__text">
+      <label for="message">Vaše zpráva</label>
+      <textarea name="message" id="message" required></textarea>
+    </div>
+
+    <div class="form__approval">
+      <label for="approval">
+        <input type="checkbox" name="approval" id="approval" required />
+        Zaškrtnutím tohoto políčka dávám souhlas se zpracováním mých osobních
+        <span class="approval__word--last">údajů.</span>
+      </label>
+    </div>
+
+    <span class="form__note">povinné pole</span>
+
+    <button type="submit" name="send" class="form__send">Odeslat</button>
+  </form>
 </div>
-
-<div class="contact__map">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1818.6404465179805!2d14.25851459644562!3d49.86225929252289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9f3e4653e769%3A0xf1a0a49fb4710c7!2zS2UgxaFrb2xlIDk3MywgMjUyIDEwIE1uw63FoWVrIHBvZCBCcmR5!5e0!3m2!1scs!2scz!4v1638529747575!5m2!1scs!2scz"
-    width="400"
-    height="300"
-    style="border: 0"
-    allowfullscreen=""
-  ></iframe>
-</div>
-
-<form method="post" action="https://submit-form.com/p0NQei1I" class="form">
-  <h2 class="form__heading">Napište nám</h2>
-  <div class="form__field">
-    <label for="name">Jméno</label>
-    <input type="text" name="name" id="name" required autofocus />
-  </div>
-
-  <div class="form__field">
-    <label for="surname">Příjmení</label>
-    <input type="text" name="surname" id="surname" required />
-  </div>
-
-  <div class="form__field">
-    <label for="email">E-mail</label>
-    <input type="email" name="email" id="email" required />
-  </div>
-
-  <div class="form__field form__field--optional">
-    <label for="telephone">Telefon</label>
-    <input
-      type="tel"
-      name="telephone"
-      id="telephone"
-      placeholder="+420 123 456 789"
-    />
-  </div>
-
-  <div class="form__topic">
-    <label for="select">Vyberte, čeho se Váš dotaz týká</label>
-    <select name="select" id="select" required>
-      <option value=""></option>
-      <option value="kurz">Dotaz na kurz</option>
-      <option value="cestování">Dotaz na cestování</option>
-      <option value="kulturní akce">Dotaz na kulturní akci</option>
-    </select>
-  </div>
-
-  <div class="form__text">
-    <label for="message">Vaše zpráva</label>
-    <textarea name="message" id="message" required></textarea>
-  </div>
-
-  <div class="form__approval">
-    <label for="approval">
-      <input type="checkbox" name="approval" id="approval" required />
-      Zaškrtnutím tohoto políčka dávám souhlas se zpracováním mých osobních
-      <span class="approval__word--last">údajů.</span>
-    </label>
-  </div>
-
-  <span class="form__note">povinné pole</span>
-
-  <button type="submit" name="send" class="form__send">Odeslat</button>
-</form>

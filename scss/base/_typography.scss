@@ -19,8 +19,11 @@ body {
 
 h1 {
   font-family: 'Fuzzy Bubbles', cursive;
-  color: colors.$color-primary;
+  color: white;
   font-weight: 700;
+  text-align: center;
+  padding-top: $spacer;
+  margin: 0 $spacer $spacer $spacer;
 }
 
 h2,

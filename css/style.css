@@ -15,8 +15,11 @@ body {
 
 h1 {
   font-family: "Fuzzy Bubbles", cursive;
-  color: #f73e6e;
+  color: white;
   font-weight: 700;
+  text-align: center;
+  padding-top: 20px;
+  margin: 0 20px 20px 20px;
 }
 
 h2,
@@ -403,16 +406,30 @@ h3 {
   padding: 0 10px 0 10px;
 }
 
-.teachers__banner {
-  background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 30%), url(/images/banner-team.jpg);
+.courses__banner {
+  background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 30%), url(/images/banner-courses.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: bottom center;
-  height: 400px;
+  background-size: cover;
+  background-position: 50% 40%;
+  min-height: 400px;
 }
-.teachers__heading {
-  color: white;
-  text-align: center;
+@media screen and (min-width: 640px) {
+  .courses__banner {
+    background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-courses.jpg);
+  }
+}
+
+.teachers__banner {
+  background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 25%), url(/images/banner-team.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  min-height: 400px;
+}
+@media screen and (min-width: 640px) {
+  .teachers__banner {
+    background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-team.jpg);
+  }
 }
 
 .profile {
@@ -511,8 +528,20 @@ h3 {
   }
 }
 
+.events__banner {
+  background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 35%), url(/images/banner-events.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  min-height: 400px;
+}
+@media screen and (min-width: 640px) {
+  .events__banner {
+    background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-events.jpg);
+  }
+}
+
 .voting {
-  border: 1px solid #f73e6e;
   text-align: center;
 }
 .voting__heading {
@@ -572,6 +601,13 @@ h3 {
   text-decoration: underline;
 }
 
+.travelling__banner {
+  background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-travelling.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+  min-height: 400px;
+}
 .travelling__map {
   overflow: hidden;
   padding-bottom: 50%;
@@ -586,7 +622,19 @@ h3 {
   position: absolute;
 }
 
-.contact {
+.contact__banner {
+  background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 30%), url(/images/banner-contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  min-height: 400px;
+}
+@media screen and (min-width: 640px) {
+  .contact__banner {
+    background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-contact.jpg);
+  }
+}
+.contact__details {
   padding-bottom: 20px;
 }
 .contact__address span, .contact__hours span, .contact__other span {
@@ -614,7 +662,7 @@ h3 {
   position: absolute;
 }
 @media screen and (min-width: 640px) {
-  .contact {
+  .contact__details {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -627,5 +675,19 @@ h3 {
   }
   .contact__hours {
     flex-basis: 100%;
+  }
+}
+
+.school__banner {
+  background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 35%), url(/images/banner-school.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  min-height: 400px;
+}
+@media screen and (min-width: 640px) {
+  .school__banner {
+    background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-school.jpg);
+    background-position: 50% 25%;
   }
 }/*# sourceMappingURL=style.css.map */

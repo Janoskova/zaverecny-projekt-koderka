@@ -1,0 +1,28 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.courses {
+  &__banner {
+    background-image: linear-gradient(
+        to bottom,
+        #f7af66e2,
+        #f73e6fd0,
+        rgba(255, 255, 255, 0) 30%
+      ),
+      url(/images/banner-courses.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
+    min-height: 400px;
+
+    @media screen and (min-width: 640px) {
+      background-image: linear-gradient(
+          to bottom,
+          #f7af66e2,
+          #f73e6fd0,
+          rgba(255, 255, 255, 0) 20%
+        ),
+        url(/images/banner-courses.jpg);
+    }
+  }
+}

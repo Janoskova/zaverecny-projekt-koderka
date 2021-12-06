@@ -2,7 +2,34 @@
 @use '../base/typography';
 
 .contact {
-  padding-bottom: typography.$spacer;
+  &__banner {
+    background-image: linear-gradient(
+        to bottom,
+        #f7af66e2,
+        #f73e6fd0,
+        rgba(255, 255, 255, 0) 30%
+      ),
+      url(/images/banner-contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    min-height: 400px;
+
+    @media screen and (min-width: 640px) {
+      background-image: linear-gradient(
+          to bottom,
+          #f7af66e2,
+          #f73e6fd0,
+          rgba(255, 255, 255, 0) 20%
+        ),
+        url(/images/banner-contact.jpg);
+    }
+  }
+
+  &__details {
+    padding-bottom: typography.$spacer;
+  }
+
   &__address span,
   &__hours span,
   &__other span {
@@ -36,10 +63,11 @@
   }
 
   @media screen and (min-width: 640px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
+    &__details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     &__address {
       flex-basis: 40%;
     }

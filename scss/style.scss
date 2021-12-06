@@ -7,6 +7,7 @@
 @use 'components/gallery';
 @use 'components/button';
 @use 'layout/footer';
+@use 'pages/kurzy';
 @use 'pages/lektori';
 @use 'pages/akce';
 @use 'pages/cestovani';
@@ -21,3 +22,30 @@
 //   height: 500px;
 //   width: 500px;
 // }
+
+.school {
+  &__banner {
+    background-image: linear-gradient(
+        to bottom,
+        #f7af66e2,
+        #f73e6fd0,
+        rgba(255, 255, 255, 0) 35%
+      ),
+      url(/images/banner-school.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    min-height: 400px;
+
+    @media screen and (min-width: 640px) {
+      background-image: linear-gradient(
+          to bottom,
+          #f7af66e2,
+          #f73e6fd0,
+          rgba(255, 255, 255, 0) 20%
+        ),
+        url(/images/banner-school.jpg);
+      background-position: 50% 25%;
+    }
+  }
+}

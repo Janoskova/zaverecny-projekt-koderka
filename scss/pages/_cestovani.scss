@@ -2,6 +2,20 @@
 @use '../base/typography';
 
 .travelling {
+  &__banner {
+    background-image: linear-gradient(
+        to bottom,
+        #f7af66e2,
+        #f73e6fd0,
+        rgba(255, 255, 255, 0) 20%
+      ),
+      url(/images/banner-travelling.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+    min-height: 400px;
+  }
+
   &__map {
     overflow: hidden;
     padding-bottom: 50%;

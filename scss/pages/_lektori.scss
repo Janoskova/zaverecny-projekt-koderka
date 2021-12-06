@@ -7,18 +7,23 @@
         to bottom,
         #f7af66e2,
         #f73e6fd0,
-        rgba(255, 255, 255, 0) 30%
+        rgba(255, 255, 255, 0) 25%
       ),
       url(/images/banner-team.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: bottom center;
-    height: 400px;
-  }
+    min-height: 400px;
 
-  &__heading {
-    color: white;
-    text-align: center;
+    @media screen and (min-width: 640px) {
+      background-image: linear-gradient(
+          to bottom,
+          #f7af66e2,
+          #f73e6fd0,
+          rgba(255, 255, 255, 0) 20%
+        ),
+        url(/images/banner-team.jpg);
+    }
   }
 }
 
