@@ -2,14 +2,10 @@
 @use '../base/typography';
 
 .newsletter {
-  margin: typography.$spacer;
+  margin: 40px auto 40px auto;
   padding: typography.$spacer;
-  border: 1px solid colors.$color-primary;
-
-  &__header {
-    text-align: center;
-    margin-bottom: typography.$spacer;
-  }
+  padding-top: 0;
+  max-width: 360px;
 
   &__email {
     display: block;
@@ -67,7 +63,7 @@
   }
 
   @media screen and (min-width: 640px) {
-    width: 550px;
+    max-width: 550px;
 
     &__flex {
       display: flex;

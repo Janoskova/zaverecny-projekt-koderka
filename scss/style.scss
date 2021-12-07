@@ -6,22 +6,13 @@
 @use 'components/slider';
 @use 'components/gallery';
 @use 'components/button';
+@use 'components/polaroid';
 @use 'layout/footer';
 @use 'pages/kurzy';
 @use 'pages/lektori';
 @use 'pages/akce';
 @use 'pages/cestovani';
 @use 'pages/kontakt';
-
-// .banner {
-//   color: white;
-//   background: linear-gradient(45deg, #f7af66a1, #f73e6fb9),
-//     url(/images/paris-roof.jpg);
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   height: 500px;
-//   width: 500px;
-// }
 
 .school {
   &__banner {
@@ -46,6 +37,34 @@
         ),
         url(/images/banner-school.jpg);
       background-position: 50% 25%;
+    }
+  }
+}
+
+.advantages {
+  margin: typography.$spacer;
+
+  &__text {
+    max-width: 360px;
+    margin: typography.$spacer auto 40px auto;
+  }
+
+  @media screen and (min-width: 640px) {
+    display: flex;
+
+    &__heading {
+      margin-top: 0;
+    }
+
+    &__text {
+      max-width: 360px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    &__text {
+      max-width: 400px;
     }
   }
 }
