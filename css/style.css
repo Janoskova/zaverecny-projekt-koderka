@@ -428,9 +428,29 @@ h3 {
 .polaroid--left {
   transform: rotate(-15deg);
 }
+@media screen and (min-width: 640px) {
+  .polaroid--left {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .polaroid--left {
+    margin-bottom: 110px;
+  }
+}
 
 .polaroid--middle {
   transform: rotate(10deg);
+}
+@media screen and (min-width: 640px) {
+  .polaroid--middle {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .polaroid--middle {
+    margin-bottom: 110px;
+  }
 }
 
 .network {
@@ -724,7 +744,6 @@ h3 {
   background-size: cover;
   background-position: 50% 0;
   min-height: 400px;
-  margin-bottom: 40px;
 }
 @media screen and (min-width: 640px) {
   .school__banner {
@@ -752,6 +771,18 @@ h3 {
 .invitation__text--underlined {
   color: #f73e6e;
   text-decoration: underline;
+}
+@media screen and (min-width: 640px) {
+  .invitation {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .invitation__heading--main {
+    flex-basis: 100%;
+  }
+  .invitation__baking, .invitation__books {
+    flex-basis: 50%;
+  }
 }
 
 .advantages {

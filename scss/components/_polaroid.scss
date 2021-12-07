@@ -40,8 +40,24 @@
 
 .polaroid--left {
   transform: rotate(-15deg);
+
+  @media screen and (min-width: 640px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    margin-bottom: 110px;
+  }
 }
 
 .polaroid--middle {
   transform: rotate(10deg);
+
+  @media screen and (min-width: 640px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    margin-bottom: 110px;
+  }
 }
