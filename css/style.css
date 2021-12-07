@@ -415,6 +415,7 @@ h3 {
 }
 @media screen and (min-width: 640px) {
   .polaroid {
+    width: 190px;
     max-height: 200px;
   }
 }
@@ -422,6 +423,14 @@ h3 {
   .polaroid {
     width: 230px;
   }
+}
+
+.polaroid--left {
+  transform: rotate(-15deg);
+}
+
+.polaroid--middle {
+  transform: rotate(10deg);
 }
 
 .network {
@@ -715,12 +724,34 @@ h3 {
   background-size: cover;
   background-position: 50% 0;
   min-height: 400px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 640px) {
   .school__banner {
     background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-school.jpg);
     background-position: 50% 25%;
   }
+}
+
+.invitation {
+  margin: 20px;
+}
+.invitation__heading {
+  margin-top: 40px;
+}
+.invitation__text {
+  max-width: 360px;
+  margin: 20px auto 40px auto;
+  text-align: center;
+}
+.invitation__link {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+.invitation__text--underlined {
+  color: #f73e6e;
+  text-decoration: underline;
 }
 
 .advantages {
