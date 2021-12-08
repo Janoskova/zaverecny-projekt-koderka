@@ -1,0 +1,86 @@
+---
+layout: layouts/main-template.njk
+title: peceni
+---
+
+<section class="event">
+  <h2>Pečení bûche de Noël</h2>
+  <span class="event__date">22.&nbsp;prosince&nbsp;2021 17:00–21:00</span>
+
+  <p class="event__text">
+    Bûche de Noël je vánoční moučník, který se podává nejen ve Francii, ale
+    rovněž ve Švýcarku, Belgii nebo Kanadě. Tato roláda vychází z tradice
+    <a
+      class="event__link--underlined"
+      href="https://cs.wikipedia.org/wiki/V%C3%A1no%C4%8Dn%C3%AD_poleno"
+      >vánočního polena</a
+    >. Existuje vícero bûche de Noël. My bychom společně připravili kávovou
+    variantu, jež bychom posléze i ochutnali. Při degustaci si můžeme zahrát i
+    nějakou společenskou hru.
+  </p>
+  <a class="event__link--underlined event__link" href="/kontakt/">
+    Na akci se můžeš přihlásit pomocí
+    <span class="event__link--coloured">formuláře</span>.</a
+  >
+
+  <span class="event__price">Vstupné: 300&nbsp;Kč (zahrnuje ingredience).</span>
+
+  <div class="event__polaroids">
+    <div class="polaroid polaroid--left">
+      <div class="polaroid__item">
+        <img
+          class="polaroid__picture"
+          src="/images/baking-hands.jpg"
+          alt="ruce hnětoucí těsto"
+        />
+        <div class="polaroid__caption">faire cuire</div>
+      </div>
+    </div>
+
+    <div class="polaroid polaroid--middle">
+      <div class="polaroid__item">
+        <img
+          class="polaroid__picture"
+          src="/images/baking-hand.jpg"
+          alt="těsto"
+        />
+        <div class="polaroid__caption">la pâte</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<form class="voting" method="post" action="https://submit-form.com/ftKZrOh5">
+  <h2 class="voting__heading">Vyber typ příští společenské akce</h2>
+  <input
+    type="checkbox"
+    id="voting-option1"
+    name="voting-option1"
+    value="travelling"
+    class="voting__checkbox"
+  />
+  <label class="voting__description" for="voting-option1"
+    >Cestopisná přednáška</label
+  >
+  <input
+    type="checkbox"
+    id="voting-option2"
+    name="voting-option2"
+    value="film"
+    class="voting__checkbox"
+  />
+  <label class="voting__description" for="voting-option2"
+    >Filmové promítání</label
+  >
+  <input
+    type="checkbox"
+    id="voting-option3"
+    name="voting-option3"
+    value="photos"
+    class="voting__checkbox"
+  />
+  <label class="voting__description" for="voting-option3"
+    >Výstava fotografií</label
+  >
+  <button type="submit" name="send" class="voting__send">Odeslat</button>
+</form>

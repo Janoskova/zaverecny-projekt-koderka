@@ -1,0 +1,60 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.event {
+  margin: 0 40px 40px 40px;
+
+  text-align: center;
+  &__date {
+    color: colors.$color-primary;
+  }
+
+  &__text {
+    max-width: 580px;
+    text-align: left;
+    margin-top: typography.$spacer;
+    margin-bottom: typography.$spacer;
+
+    @media screen and (min-width: 640px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__link--underlined {
+    color: black;
+  }
+
+  &__link {
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    @media screen and (min-width: 640px) {
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__link--coloured {
+    text-decoration: underline;
+    color: colors.$color-primary;
+  }
+
+  &__price {
+    display: block;
+    text-align: left;
+
+    @media screen and (min-width: 640px) {
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__polaroids {
+    @media screen and (min-width: 640px) {
+      display: flex;
+    }
+  }
+}

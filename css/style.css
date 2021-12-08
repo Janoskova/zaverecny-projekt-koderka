@@ -661,6 +661,61 @@ h3 {
   text-decoration: underline;
 }
 
+.event {
+  margin: 0 40px 40px 40px;
+  text-align: center;
+}
+.event__date {
+  color: #f73e6e;
+}
+.event__text {
+  max-width: 580px;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 640px) {
+  .event__text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.event__link--underlined {
+  color: black;
+}
+.event__link {
+  text-decoration: none;
+  text-align: left;
+  display: block;
+}
+@media screen and (min-width: 640px) {
+  .event__link {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.event__link--coloured {
+  text-decoration: underline;
+  color: #f73e6e;
+}
+.event__price {
+  display: block;
+  text-align: left;
+}
+@media screen and (min-width: 640px) {
+  .event__price {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 640px) {
+  .event__polaroids {
+    display: flex;
+  }
+}
+
 .travelling__banner {
   background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-travelling.jpg);
   background-repeat: no-repeat;
@@ -753,10 +808,7 @@ h3 {
 }
 
 .invitation {
-  margin: 20px;
-}
-.invitation__heading {
-  margin-top: 40px;
+  margin: 40px;
 }
 .invitation__text {
   max-width: 360px;
@@ -774,6 +826,7 @@ h3 {
 }
 @media screen and (min-width: 640px) {
   .invitation {
+    margin: 20px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -786,9 +839,14 @@ h3 {
 }
 
 .advantages {
-  margin: 20px;
+  padding: 20px;
+  background-image: linear-gradient(to right, #f7af66, #f73e6e);
+}
+.advantages__heading {
+  color: white;
 }
 .advantages__text {
+  color: white;
   max-width: 360px;
   margin: 20px auto 40px auto;
 }

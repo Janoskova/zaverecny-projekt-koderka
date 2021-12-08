@@ -1,0 +1,84 @@
+---
+layout: layouts/main-template.njk
+title: blesak
+---
+
+<section class="event">
+  <h2>Blešák francouzské literatury</h2>
+  <span class="event__date">8.&nbsp;ledna&nbsp;2021 10:00–15:00</span>
+
+  <p class="event__text">
+    Pokud sháníš knihu, se kterou by sis zpříjemnil zimní večer, přijď
+    8.&nbsp;ledna k nám do školy, kde se uskuteční již tradiční blešák (nejen)
+    francouzských knih. Pokud chceš nějakou knihu prodat, přines ji. Jen je
+    potřeba se předem přihlásit přes formulář na níže uvedeném odkazu, abychom
+    ti rezervovali stůl, kde své knihy vystavíš. Letošní blešák proběhne
+    společně s autorským čtením vycházející hvězdy francouzských detektivek,
+    Annou-Garnier.
+  </p>
+  <a class="event__link--underlined event__link" href="/kontakt/">
+    Na akci se můžeš přihlásit pomocí
+    <span class="event__link--coloured">formuláře</span>.</a
+  >
+
+  <span class="event__price">Vstupné: zdarma.</span>
+
+  <div class="event__polaroids">
+    <div class="polaroid polaroid--left">
+      <div class="polaroid__item">
+        <img
+          class="polaroid__picture"
+          src="/images/event-books.jpg"
+          alt="knihy"
+        />
+        <div class="polaroid__caption">les livres</div>
+      </div>
+    </div>
+
+    <div class="polaroid polaroid--middle">
+      <div class="polaroid__item">
+        <img
+          class="polaroid__picture"
+          src="/images/event-reading-woman.jpg"
+          alt="žena čtoucí knihu"
+        />
+        <div class="polaroid__caption">lire</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<form class="voting" method="post" action="https://submit-form.com/ftKZrOh5">
+  <h2 class="voting__heading">Vyber typ příští společenské akce</h2>
+  <input
+    type="checkbox"
+    id="voting-option1"
+    name="voting-option1"
+    value="travelling"
+    class="voting__checkbox"
+  />
+  <label class="voting__description" for="voting-option1"
+    >Cestopisná přednáška</label
+  >
+  <input
+    type="checkbox"
+    id="voting-option2"
+    name="voting-option2"
+    value="film"
+    class="voting__checkbox"
+  />
+  <label class="voting__description" for="voting-option2"
+    >Filmové promítání</label
+  >
+  <input
+    type="checkbox"
+    id="voting-option3"
+    name="voting-option3"
+    value="photos"
+    class="voting__checkbox"
+  />
+  <label class="voting__description" for="voting-option3"
+    >Výstava fotografií</label
+  >
+  <button type="submit" name="send" class="voting__send">Odeslat</button>
+</form>
