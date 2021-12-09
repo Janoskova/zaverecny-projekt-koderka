@@ -3,9 +3,51 @@ layout: layouts/main-template.njk
 title: Společenské akce
 ---
 
-<div class="events__banner">
+<div class="culture__banner">
   <h1>Poznej s námi francouzskou kulturu</h1>
 </div>
+
+<h2>Nadcházející akce</h2>
+
+<section class="culture__links">
+  {% for event in collections.next %}
+
+  <div class="polaroid--static">
+    <a class="culture__link" href="{{event.url}}">
+      <div class="polaroid__item">
+        <img
+          class="polaroid__picture"
+          src="/images/{{event.data.image1}}"
+          alt="{{event.data.alt1}}"
+        />
+        <div class="polaroid__caption">{{event.data.title}}</div>
+      </div>
+    </a>
+  </div>
+
+  {% endfor %}
+</section>
+
+<h2>Proběhlé akce</h2>
+
+<section class="culture__links">
+  {% for event in collections.previous %}
+
+  <a class="culture__link" href="{{event.url}}">
+    <div class="polaroid--static">
+      <div class="polaroid__item">
+        <img
+          class="polaroid__picture"
+          src="/images/{{event.data.image1}}"
+          alt="{{event.data.alt1}}"
+        />
+        <div class="polaroid__caption">{{event.data.title}}</div>
+      </div>
+    </div>
+  </a>
+
+  {% endfor %}
+</section>
 
 <form class="voting" method="post" action="https://submit-form.com/ftKZrOh5">
   <h2 class="voting__heading">Vyber typ příští společenské akce</h2>

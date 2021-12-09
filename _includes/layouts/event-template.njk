@@ -1,37 +1,23 @@
 ---
 layout: layouts/main-template.njk
-title: blesak
 ---
 
 <section class="event">
-  <h2>Blešák francouzské literatury</h2>
-  <span class="event__date">8.&nbsp;ledna&nbsp;2021 10:00–15:00</span>
+  <h2>{{ title }}</h2>
+  <span class="event__date">{{ eventDate }}</span>
+  <span class="event__time">{{ eventTime }}</span>
 
-  <p class="event__text">
-    Pokud sháníš knihu, se kterou by sis zpříjemnil zimní večer, přijď
-    8.&nbsp;ledna k nám do školy, kde se uskuteční již tradiční blešák (nejen)
-    francouzských knih. Pokud chceš nějakou knihu prodat, přines ji. Jen je
-    potřeba se předem přihlásit přes formulář na níže uvedeném odkazu, abychom
-    ti rezervovali stůl, kde své knihy vystavíš. Letošní blešák proběhne
-    společně s autorským čtením vycházející hvězdy francouzských detektivek,
-    Annou-Garnier.
-  </p>
-  <a class="event__link--underlined event__link" href="/kontakt/">
-    Na akci se můžeš přihlásit pomocí
-    <span class="event__link--coloured">formuláře</span>.</a
-  >
-
-  <span class="event__price">Vstupné: zdarma.</span>
+  {{ content | safe }}
 
   <div class="event__polaroids">
     <div class="polaroid polaroid--left">
       <div class="polaroid__item">
         <img
           class="polaroid__picture"
-          src="/images/event-books.jpg"
-          alt="knihy"
+          src="/images/{{ image1 }}"
+          alt="{{ alt1 }}"
         />
-        <div class="polaroid__caption">les livres</div>
+        <div class="polaroid__caption">{{ caption1 }}</div>
       </div>
     </div>
 
@@ -39,10 +25,10 @@ title: blesak
       <div class="polaroid__item">
         <img
           class="polaroid__picture"
-          src="/images/event-reading-woman.jpg"
-          alt="žena čtoucí knihu"
+          src="/images/{{ image2 }}"
+          alt="{{ alt2 }}"
         />
-        <div class="polaroid__caption">lire</div>
+        <div class="polaroid__caption">{{ caption2 }}</div>
       </div>
     </div>
   </div>

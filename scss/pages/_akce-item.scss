@@ -9,6 +9,11 @@
     color: colors.$color-primary;
   }
 
+  &__time {
+    color: colors.$color-primary;
+    display: block;
+  }
+
   &__text {
     max-width: 580px;
     text-align: left;
