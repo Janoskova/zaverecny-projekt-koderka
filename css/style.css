@@ -386,8 +386,11 @@ h3 {
   }
 }
 
-.gallery__link:nth-child(2), .gallery__link:nth-child(6) {
+.gallery__link:nth-child(2), .gallery__link:nth-child(6), .gallery__item:nth-child(2), .gallery__link:nth-child(6) {
   display: none;
+}
+.gallery__link {
+  overflow: hidden;
 }
 @media screen and (min-width: 640px) {
   .gallery {
@@ -402,8 +405,8 @@ h3 {
   }
 }
 .gallery__item {
-  vertical-align: bottom;
-  margin-bottom: 10px;
+  display: block;
+  margin-bottom: 1px;
   width: 100%;
 }
 @media screen and (min-width: 640px) {
@@ -413,6 +416,9 @@ h3 {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .gallery__item:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -513,6 +519,32 @@ h3 {
 @media screen and (min-width: 640px) {
   .courses__banner {
     background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-courses.jpg);
+  }
+}
+@media screen and (min-width: 640px) {
+  .courses__photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
+    gap: 1px;
+    overflow: hidden;
+  }
+}
+.courses__photo {
+  display: block;
+  margin-bottom: 1px;
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .courses__photo {
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .courses__photo:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -641,6 +673,8 @@ h3 {
 @media screen and (min-width: 640px) {
   .culture__links {
     display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
   }
 }
 .culture__link {
@@ -650,11 +684,6 @@ h3 {
 .culture__link:hover {
   text-decoration: underline;
 }
-@media screen and (min-width: 640px) {
-  .culture__link {
-    flex-basis: 50%;
-  }
-}
 
 .voting {
   text-align: center;
@@ -662,6 +691,16 @@ h3 {
 .voting__heading {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 640px) {
+  .voting__heading {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 640px) {
+  .voting__heading--margin {
+    margin-top: 20px;
+  }
 }
 .voting__checkbox {
   position: absolute;
@@ -719,6 +758,11 @@ h3 {
 .event {
   margin: 0 40px 40px 40px;
   text-align: center;
+}
+@media screen and (min-width: 640px) {
+  .event {
+    margin: 0 40px 0 40px;
+  }
 }
 .event__date {
   color: #f73e6e;
@@ -885,15 +929,17 @@ h3 {
 }
 @media screen and (min-width: 640px) {
   .invitation {
-    margin: 20px;
+    margin: 0 20px 0 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   .invitation__heading--main {
     flex-basis: 100%;
+    margin-bottom: 0;
   }
   .invitation__baking, .invitation__books {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 10px);
   }
 }
 

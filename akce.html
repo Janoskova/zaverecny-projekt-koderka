@@ -12,8 +12,8 @@ title: Společenské akce
 <section class="culture__links">
   {% for event in collections.next %}
 
-  <div class="polaroid--static">
-    <a class="culture__link" href="{{event.url}}">
+  <a class="culture__link" href="{{event.url}}">
+    <div class="polaroid--static">
       <div class="polaroid__item">
         <img
           class="polaroid__picture"
@@ -22,8 +22,8 @@ title: Společenské akce
         />
         <div class="polaroid__caption">{{event.data.title}}</div>
       </div>
-    </a>
-  </div>
+    </div>
+  </a>
 
   {% endfor %}
 </section>
@@ -50,7 +50,9 @@ title: Společenské akce
 </section>
 
 <form class="voting" method="post" action="https://submit-form.com/ftKZrOh5">
-  <h2 class="voting__heading">Vyber typ příští společenské akce</h2>
+  <h2 class="voting__heading voting__heading--margin">
+    Vyber typ příští společenské akce
+  </h2>
   <input
     type="checkbox"
     id="voting-option1"

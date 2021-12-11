@@ -50,7 +50,12 @@ title: Kontakt
     ></iframe>
   </div>
 
-  <form method="post" action="https://submit-form.com/p0NQei1I" class="form">
+  <form
+    method="post"
+    action="https://submit-form.com/p0NQei1I"
+    class="form"
+    id="contactForm"
+  >
     <h2 class="form__heading">Napiš nám</h2>
     <div class="form__field">
       <label for="name">Jméno</label>
@@ -81,9 +86,11 @@ title: Kontakt
       <label for="select">Vyberte, čeho se Váš dotaz týká</label>
       <select name="select" id="select" required>
         <option value=""></option>
+        <option value="pečení">Rezervace místa na pečení bûche de Noël</option>
+        <option value="blešák">Rezervace místa na blešáku</option>
+        <option value="kulturní akce">Dotaz na kulturní akci</option>
         <option value="kurz">Dotaz na kurz</option>
         <option value="cestování">Dotaz na cestování</option>
-        <option value="kulturní akce">Dotaz na kulturní akci</option>
       </select>
     </div>
 

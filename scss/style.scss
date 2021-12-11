@@ -3,7 +3,7 @@
 @use 'layout/header';
 @use 'layout/form';
 @use 'layout/newsletter';
-@use 'components/slider';
+@use 'components/slider-siema';
 @use 'components/gallery';
 @use 'components/button';
 @use 'components/polaroid';
@@ -63,18 +63,20 @@
   }
 
   @media screen and (min-width: 640px) {
-    margin: typography.$spacer;
+    margin: 0 typography.$spacer 0 typography.$spacer;
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     &__heading--main {
       flex-basis: 100%;
+      margin-bottom: 0;
     }
 
     &__baking,
     &__books {
-      flex-basis: 50%;
+      flex-basis: calc(50% - 10px);
     }
   }
 }

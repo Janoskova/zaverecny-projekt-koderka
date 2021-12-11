@@ -6,8 +6,12 @@ layout: layouts/main-template.njk
   <h2>{{ title }}</h2>
   <span class="event__date">{{ eventDate }}</span>
   <span class="event__time">{{ eventTime }}</span>
+  <div class="event__text">
+    {{ content | safe }}
 
-  {{ content | safe }}
+    <p>{{ booking }}</p>
+    <span class="event__price">{{ price }}</span>
+  </div>
 
   <div class="event__polaroids">
     <div class="polaroid polaroid--left">

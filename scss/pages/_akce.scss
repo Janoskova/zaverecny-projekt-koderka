@@ -30,6 +30,8 @@
   &__links {
     @media screen and (min-width: 640px) {
       display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
     }
   }
 
@@ -40,10 +42,6 @@
     &:hover {
       text-decoration: underline;
     }
-
-    @media screen and (min-width: 640px) {
-      flex-basis: 50%;
-    }
   }
 }
 
@@ -53,6 +51,15 @@
   &__heading {
     margin-top: typography.$spacer;
     margin-bottom: typography.$spacer;
+    @media screen and (min-width: 640px) {
+      margin-top: 0;
+    }
+  }
+
+  &__heading--margin {
+    @media screen and (min-width: 640px) {
+      margin-top: typography.$spacer;
+    }
   }
 
   &__checkbox {
