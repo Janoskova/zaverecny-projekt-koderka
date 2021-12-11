@@ -59,6 +59,9 @@
     text-align: left;
     padding-left: typography.$spacer;
     padding-right: typography.$spacer;
+    @media screen and (min-width: 640px) {
+      max-width: 560px;
+    }
   }
 
   &__checkbox {
@@ -102,6 +105,9 @@
   &__czech {
     padding: typography.$spacer;
     padding-top: 0;
+    @media screen and (min-width: 640px) {
+      max-width: 560px;
+    }
   }
 
   &__link {
@@ -120,6 +126,7 @@
   @media screen and (min-width: 640px) {
     display: flex;
     align-items: flex-start;
+    justify-content: space-evenly;
 
     &__picture {
       margin: typography.$spacer typography.$spacer 0 typography.$spacer;
