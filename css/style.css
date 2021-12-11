@@ -386,9 +386,6 @@ h3 {
   }
 }
 
-.gallery__link:nth-child(2), .gallery__link:nth-child(6), .gallery__item:nth-child(2), .gallery__link:nth-child(6) {
-  display: none;
-}
 .gallery__link {
   overflow: hidden;
 }
@@ -837,8 +834,12 @@ h3 {
   background-position: center 40%;
   min-height: 400px;
 }
+.travelling__heading--date, .travelling__heading--price {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .travelling__text {
-  margin-bottom: 40px;
+  margin: 0 20px 40px 20px;
 }
 @media screen and (min-width: 640px) {
   .travelling__text {
@@ -876,6 +877,25 @@ h3 {
 .travelling__heading {
   text-align: left;
   padding-left: 20px;
+}
+.travelling__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.travelling__checkbox:checked ~ .travelling__days > .travelling__itinerary {
+  display: block;
+}
+.travelling__checkbox:checked ~ .travelling__days > .travelling__toggler--down {
+  display: inline;
+}
+.travelling__checkbox:checked ~ .travelling__days > .travelling__toggler--right {
+  display: none;
+}
+.travelling__itinerary, .travelling__toggler--down {
+  display: none;
+}
+.travelling__toggler {
+  cursor: pointer;
 }
 .travelling__map {
   overflow: hidden;

@@ -2,13 +2,6 @@
 @use '../base/typography';
 
 .gallery {
-  &__link:nth-child(2),
-  &__link:nth-child(6),
-  &__item:nth-child(2),
-  &__link:nth-child(6) {
-    display: none;
-  }
-
   &__link {
     overflow: hidden;
   }
