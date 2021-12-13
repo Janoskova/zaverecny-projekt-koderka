@@ -90,27 +90,6 @@
     margin-bottom: typography.$spacer;
   }
 
-  &__send {
-    color: white;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 10px 30px;
-    border-radius: 20px;
-    border: none;
-    display: block;
-    margin: auto;
-    background-image: linear-gradient(
-      to right,
-      colors.$color-secondary,
-      colors.$color-primary
-    );
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-
   @media screen and (min-width: 640px) {
     display: flex;
     flex-wrap: wrap;

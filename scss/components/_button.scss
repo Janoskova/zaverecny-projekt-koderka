@@ -1,0 +1,23 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.button {
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  margin: auto;
+  background-image: linear-gradient(
+    to right,
+    colors.$color-secondary,
+    colors.$color-primary
+  );
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

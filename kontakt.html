@@ -56,6 +56,11 @@ title: Kontakt
     class="form"
     id="contactForm"
   >
+    <input
+      type="hidden"
+      name="_redirect"
+      value="https://domtom.netlify.app/potvrzeni/"
+    />
     <h2 class="form__heading">Napiš nám</h2>
     <div class="form__field">
       <label for="name">Jméno</label>
@@ -109,6 +114,6 @@ title: Kontakt
 
     <span class="form__note">povinné pole</span>
 
-    <button type="submit" name="send" class="form__send">Odeslat</button>
+    <button type="submit" name="button" class="button">Odeslat</button>
   </form>
 </div>

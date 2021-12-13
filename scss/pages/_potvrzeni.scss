@@ -1,0 +1,25 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.confirmation {
+  text-align: center;
+  &__done,
+  &__text,
+  &__link {
+    display: block;
+  }
+
+  &__done {
+    margin: auto;
+  }
+
+  &__done,
+  &__text {
+    margin-bottom: typography.$spacer;
+  }
+
+  &__link {
+    margin-bottom: 40px;
+    color: colors.$color-primary;
+  }
+}

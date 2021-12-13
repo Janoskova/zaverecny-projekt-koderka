@@ -231,20 +231,6 @@ h3 {
   display: block;
   margin-bottom: 20px;
 }
-.form__send {
-  color: white;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding: 10px 30px;
-  border-radius: 20px;
-  border: none;
-  display: block;
-  margin: auto;
-  background-image: linear-gradient(to right, #f7af66, #f73e6e);
-}
-.form__send:hover, .form__send:focus {
-  text-decoration: underline;
-}
 @media screen and (min-width: 640px) {
   .form {
     display: flex;
@@ -417,6 +403,21 @@ h3 {
   .gallery__item:hover {
     transform: scale(1.1);
   }
+}
+
+.button {
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  margin: auto;
+  background-image: linear-gradient(to right, #f7af66, #f73e6e);
+}
+.button:hover, .button:focus {
+  text-decoration: underline;
 }
 
 .polaroid {
@@ -995,6 +996,23 @@ h3 {
   .contact__hours {
     flex-basis: 100%;
   }
+}
+
+.confirmation {
+  text-align: center;
+}
+.confirmation__done, .confirmation__text, .confirmation__link {
+  display: block;
+}
+.confirmation__done {
+  margin: auto;
+}
+.confirmation__done, .confirmation__text {
+  margin-bottom: 20px;
+}
+.confirmation__link {
+  margin-bottom: 40px;
+  color: #f73e6e;
 }
 
 .school__banner {
