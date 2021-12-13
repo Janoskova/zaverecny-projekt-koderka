@@ -519,6 +519,22 @@ h3 {
     background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-courses.jpg);
   }
 }
+.courses__application {
+  max-width: 260px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  margin: 40px auto 40px auto;
+  background-image: linear-gradient(to right, #f7af66, #f73e6e);
+}
+.courses__application:hover, .courses__application:focus {
+  text-decoration: underline;
+}
 @media screen and (min-width: 640px) {
   .courses__photos {
     display: grid;

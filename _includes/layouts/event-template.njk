@@ -39,6 +39,12 @@ layout: layouts/main-template.njk
 </section>
 
 <form class="voting" method="post" action="https://submit-form.com/ftKZrOh5">
+  <input
+    type="hidden"
+    name="_redirect"
+    value="https://domtom.netlify.app/potvrzeni/"
+  />
+
   <h2 class="voting__heading">Vyber typ příští společenské akce</h2>
   <input
     type="checkbox"

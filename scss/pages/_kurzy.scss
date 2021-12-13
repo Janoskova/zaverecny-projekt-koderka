@@ -26,6 +26,29 @@
     }
   }
 
+  &__application {
+    max-width: 260px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    margin: 40px auto 40px auto;
+    background-image: linear-gradient(
+      to right,
+      colors.$color-secondary,
+      colors.$color-primary
+    );
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
   &__photos {
     @media screen and (min-width: 640px) {
       display: grid;
