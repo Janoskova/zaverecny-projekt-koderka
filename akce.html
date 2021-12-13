@@ -10,7 +10,7 @@ title: Společenské akce
 <h2>Nadcházející akce</h2>
 
 <section class="culture__links">
-  {% for event in collections.next %}
+  {% for event in collections.next | reverse %}
 
   <a class="culture__link" href="{{event.url}}">
     <div class="polaroid--static">
@@ -31,7 +31,7 @@ title: Společenské akce
 <h2>Proběhlé akce</h2>
 
 <section class="culture__links">
-  {% for event in collections.previous %}
+  {% for event in collections.previous | reverse %}
 
   <a class="culture__link" href="{{event.url}}">
     <div class="polaroid--static">

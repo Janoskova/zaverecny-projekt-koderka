@@ -614,7 +614,6 @@ h3 {
   color: #f73e6e;
   font-weight: 700;
   vertical-align: top;
-  cursor: pointer;
   display: inline;
 }
 .profile__czech, .profile__toggler--down {
@@ -839,12 +838,12 @@ h3 {
   margin-right: 20px;
 }
 .travelling__text {
-  margin: 0 20px 40px 20px;
+  margin: 0 20px 0 20px;
 }
 @media screen and (min-width: 640px) {
   .travelling__text {
-    margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     margin-left: 40px;
     margin-right: 40px;
   }
@@ -852,6 +851,12 @@ h3 {
 .travelling__introduction {
   max-width: 360px;
   margin: 20px auto 20px auto;
+}
+@media screen and (min-width: 640px) {
+  .travelling__introduction {
+    margin: 20px 0 0 0;
+    flex-basis: 50%;
+  }
 }
 @media screen and (min-width: 1100px) {
   .travelling__introduction {
@@ -874,30 +879,55 @@ h3 {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 640px) {
+  .travelling__details {
+    flex-basis: 50%;
+  }
+}
 .travelling__heading {
   text-align: left;
   padding-left: 20px;
+}
+.travelling__itinerary {
+  max-width: 360px;
+  margin: 20px auto 0 auto;
+}
+@media screen and (min-width: 640px) {
+  .travelling__itinerary {
+    flex-basis: 100%;
+    margin: 20px 0 0 0;
+    max-width: 560px;
+  }
 }
 .travelling__checkbox {
   position: absolute;
   left: -9999px;
 }
-.travelling__checkbox:checked ~ .travelling__days > .travelling__itinerary {
+.travelling__checkbox:checked ~ .travelling__wrapper > .travelling__days {
   display: block;
 }
-.travelling__checkbox:checked ~ .travelling__days > .travelling__toggler--down {
+.travelling__checkbox:checked ~ .travelling__wrapper > .travelling__toggler--down {
   display: inline;
 }
-.travelling__checkbox:checked ~ .travelling__days > .travelling__toggler--right {
+.travelling__checkbox:checked ~ .travelling__wrapper > .travelling__toggler--right {
   display: none;
 }
-.travelling__itinerary, .travelling__toggler--down {
+.travelling__days, .travelling__toggler--down {
   display: none;
 }
 .travelling__toggler {
   cursor: pointer;
 }
+.travelling__toggler--text {
+  color: #f73e6e;
+  font-weight: 700;
+  vertical-align: top;
+}
+.travelling__days {
+  margin-bottom: 0;
+}
 .travelling__map {
+  margin-top: 40px;
   overflow: hidden;
   padding-bottom: 50%;
   position: relative;
