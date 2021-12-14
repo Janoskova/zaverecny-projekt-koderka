@@ -72,16 +72,16 @@
       display: block;
     }
 
-    &:checked ~ .profile__description > .profile__toggler--right {
+    &:checked ~ .profile__wrapper > .profile__toggler--right {
       display: none;
     }
 
-    &:checked ~ .profile__description > .profile__toggler--down {
+    &:checked ~ .profile__wrapper > .profile__toggler--down {
       display: inline;
     }
   }
 
-  &__description {
+  &__wrapper {
     padding-left: typography.$spacer;
   }
 

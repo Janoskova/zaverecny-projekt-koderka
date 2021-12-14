@@ -18,8 +18,17 @@
     margin-bottom: typography.$spacer;
   }
 
+  &__text {
+    margin: 0 auto 0 auto;
+    padding: 0 typography.$spacer-double 0 typography.$spacer-double;
+    max-width: 360px;
+    @media screen and (min-width: 640px) {
+      max-width: 560px;
+    }
+  }
+
   &__link {
-    margin-bottom: 40px;
+    margin-bottom: typography.$spacer-double;
     color: colors.$color-primary;
   }
 }

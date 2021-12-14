@@ -33,7 +33,8 @@ h3 {
 .wrapper {
   max-width: 66rem;
   margin: 0 auto;
-  border: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
 }
 
 @media screen and (min-width: 1100px) {
@@ -507,6 +508,16 @@ h3 {
   padding: 0 10px 0 10px;
 }
 
+.references {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.references__link {
+  text-decoration: none;
+  color: white;
+}
+
 .courses__banner {
   background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 30%), url(/images/banner-courses.jpg);
   background-repeat: no-repeat;
@@ -519,10 +530,31 @@ h3 {
     background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-courses.jpg);
   }
 }
+.courses__info {
+  margin: 0 auto 0 auto;
+  padding: 0 40px 0 40px;
+  max-width: 360px;
+}
+@media screen and (min-width: 640px) {
+  .courses__info {
+    max-width: 560px;
+  }
+}
+.courses__grid {
+  overflow: auto;
+  white-space: nowrap;
+}
+.courses__heading {
+  margin-top: 0;
+}
+.courses__email {
+  color: #f73e6e;
+}
 .courses__application {
   max-width: 260px;
   text-align: center;
   color: white;
+  text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
   padding: 10px 30px;
@@ -551,7 +583,7 @@ h3 {
 }
 @media screen and (min-width: 640px) {
   .courses__photo {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -560,6 +592,26 @@ h3 {
   .courses__photo:hover {
     transform: scale(1.1);
   }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  align-items: center;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 3px lightgray;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 40px 40px 40px;
+  min-width: 700px;
+}
+.grid__description {
+  color: #f73e6e;
+  text-transform: uppercase;
+}
+.grid__coloured {
+  background-color: lightgray;
 }
 
 .teachers__banner {
@@ -615,13 +667,13 @@ h3 {
 .profile__checkbox:checked ~ .profile__czech {
   display: block;
 }
-.profile__checkbox:checked ~ .profile__description > .profile__toggler--right {
+.profile__checkbox:checked ~ .profile__wrapper > .profile__toggler--right {
   display: none;
 }
-.profile__checkbox:checked ~ .profile__description > .profile__toggler--down {
+.profile__checkbox:checked ~ .profile__wrapper > .profile__toggler--down {
   display: inline;
 }
-.profile__description {
+.profile__wrapper {
   padding-left: 20px;
 }
 .profile__toggler {
@@ -1025,6 +1077,16 @@ h3 {
 }
 .confirmation__done, .confirmation__text {
   margin-bottom: 20px;
+}
+.confirmation__text {
+  margin: 0 auto 0 auto;
+  padding: 0 40px 0 40px;
+  max-width: 360px;
+}
+@media screen and (min-width: 640px) {
+  .confirmation__text {
+    max-width: 560px;
+  }
 }
 .confirmation__link {
   margin-bottom: 40px;

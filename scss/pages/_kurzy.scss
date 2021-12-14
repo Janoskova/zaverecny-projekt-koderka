@@ -26,17 +26,40 @@
     }
   }
 
+  &__info {
+    margin: 0 auto 0 auto;
+    padding: 0 typography.$spacer-double 0 typography.$spacer-double;
+    max-width: 360px;
+    @media screen and (min-width: 640px) {
+      max-width: 560px;
+    }
+  }
+
+  &__grid {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  &__heading {
+    margin-top: 0;
+  }
+
+  &__email {
+    color: colors.$color-primary;
+  }
+
   &__application {
     max-width: 260px;
     text-align: center;
     color: white;
+    text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
     padding: 10px 30px;
     border-radius: 20px;
     border: none;
     display: block;
-    margin: 40px auto 40px auto;
+    margin: typography.$spacer-double auto typography.$spacer-double auto;
     background-image: linear-gradient(
       to right,
       colors.$color-secondary,
@@ -65,7 +88,7 @@
     width: 100%;
 
     @media screen and (min-width: 640px) {
-      margin-bottom: 0px;
+      margin-bottom: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -73,5 +96,28 @@
         transform: scale(1.1);
       }
     }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  align-items: center;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 3px lightgray;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 typography.$spacer-double typography.$spacer-double
+    typography.$spacer-double;
+  min-width: 700px;
+
+  &__description {
+    color: colors.$color-primary;
+    text-transform: uppercase;
+  }
+
+  &__coloured {
+    background-color: lightgray;
   }
 }
