@@ -66,6 +66,9 @@ h3 {
   }
 }
 
+.menu {
+  position: relative;
+}
 .menu__checkbox {
   position: absolute;
   left: -9999px;
@@ -89,9 +92,10 @@ h3 {
 .menu__list {
   margin: 0;
   padding: 0;
-  position: fixed;
+  position: absolute;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
+  visibility: hidden;
 }
 .menu__item {
   text-align: center;
@@ -115,6 +119,7 @@ h3 {
     position: static;
     background-image: linear-gradient(to right, #f7af66, #f73e6e);
     transform: translateX(0);
+    visibility: visible;
   }
   .menu__checkbox:checked ~ .menu__description > .menu__toggler--hamburger, .menu__checkbox:checked ~ .menu__description > .menu__text {
     display: none;
@@ -133,6 +138,7 @@ h3 {
     position: static;
     transform: none;
     transition: none;
+    visibility: visible;
   }
   .menu__item {
     border: none;
@@ -1093,15 +1099,36 @@ h3 {
   color: #f73e6e;
 }
 
-.school__banner {
+.banner {
+  overflow: hidden;
+}
+.banner__school {
   background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 35%), url(/images/banner-school.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 0;
   min-height: 400px;
+  -webkit-animation: font 5s both;
+          animation: font 5s both;
+}
+@-webkit-keyframes font {
+  0% {
+    font-size: 10px;
+  }
+  100% {
+    font-size: 18px;
+  }
+}
+@keyframes font {
+  0% {
+    font-size: 10px;
+  }
+  100% {
+    font-size: 18px;
+  }
 }
 @media screen and (min-width: 640px) {
-  .school__banner {
+  .banner__school {
     background-image: linear-gradient(to bottom, #f7af66e2, #f73e6fd0, rgba(255, 255, 255, 0) 20%), url(/images/banner-school.jpg);
     background-position: 50% 25%;
   }
