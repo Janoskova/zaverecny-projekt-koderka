@@ -2,10 +2,11 @@
 @use '../base/typography';
 
 .event {
-  margin: 0 40px 40px 40px;
+  margin: 0 typography.$spacer-double typography.$spacer-double
+    typography.$spacer-double;
 
   @media screen and (min-width: 640px) {
-    margin: 0 40px 0 40px;
+    margin: 0 typography.$spacer-double 0 typography.$spacer-double;
   }
 
   text-align: center;

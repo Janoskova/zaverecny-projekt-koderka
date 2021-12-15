@@ -64,6 +64,10 @@
     }
   }
 
+  &__text--big {
+    text-transform: uppercase;
+  }
+
   &__checkbox {
     position: absolute;
     left: -9999px;

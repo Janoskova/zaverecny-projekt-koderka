@@ -4,11 +4,13 @@ module.exports = function (eleventyConfig) {
   // Zkopírovat images/ do _site/images
   eleventyConfig.addPassthroughCopy('images');
 
+  // Zkopírovat documents/ do _site/documents
   eleventyConfig.addPassthroughCopy('documents');
 
   // Zkopírovat css/ to _site/css/
   eleventyConfig.addPassthroughCopy('css');
 
+  // Zkopírovat js/ to _site/js/
   eleventyConfig.addPassthroughCopy('js');
 
   return {

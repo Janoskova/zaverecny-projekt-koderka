@@ -3,7 +3,7 @@
 
 .polaroid {
   width: 200px;
-  margin: 40px auto typography.$spacer auto;
+  margin: typography.$spacer-double auto typography.$spacer auto;
   transform: rotate(15deg);
   transition: transform 0.3s ease;
   box-shadow: 0 1px 3px lightgray;

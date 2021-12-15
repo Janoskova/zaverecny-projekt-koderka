@@ -2,7 +2,7 @@
 @use '../base/typography';
 
 .newsletter {
-  margin: 40px auto 40px auto;
+  margin: typography.$spacer-double auto typography.$spacer-double auto;
   padding: typography.$spacer;
   padding-top: 0;
   max-width: 360px;
